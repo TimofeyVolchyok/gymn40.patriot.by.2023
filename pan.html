@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виртуальная эскпозиция "память"</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <link rel="stylesheet" href="pan.css">
+    <style>
+    #panorama {
+        width: 100%;
+        height: 90%;
+    }
+    #image{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.PNG" alt="">
+        <div class=logo>
+          <ul>
+           <!--  <li><a href="#">Контакты</a></li> -->
+            <li><a href="index.html#works">Музейная <br> эскпозиция "Память"</a></li>
+            <li><a href="index.html#benefits">Гимназицческий проект <br> "Догорами победы нам жить и помнить"</a></li>
+            <li><a href="index.html#discount">Реализация проекта</a></li>
+            <li id="kart"><a  href="kart.html">Серия тематических <br> открыток "Связь поколений"</a></li>
+            <li id="alley"><a href="items.html">Аллея героев</a></li>
+            <li id="main"><a href="index.html">Главная страница</a></li>
+
+          </ul>
+        </div>
+        <!-- <div class="numbers">
+          <h3>+375-(29)-111-22-33</h3>
+          <h3>+375-(29)-111-22-33</h3>
+        </div> -->
+      </header>
+<div id="panorama"></div>
+<script>
+    let img=document.querySelector('#image')
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "./pan.jpg"
+});
+</script>
+
+</body>
+</html>
