@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            margin: 0;            
+        }
+
+        /************************/
+        /*Это вставить в проект:*/
+        /************************/
+        .carousel1 {
+            width: 80vw;
+            margin: 2vw auto;            
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5vmin;
+        }        
+        .carousel-arrow {
+            width: calc(5rem + 5vmin);
+            height: calc(5rem + 5vmin);
+            background-size: cover;
+            background-position: center;
+            transition: .3s;
+        }
+        .carousel-arrow:hover {
+            cursor: pointer;
+        }
+        .carousel-arrow-left {
+            background-image: url(img/arrow-left.png);
+        }
+        .carousel-arrow-right {
+            background-image: url(img/arrow-right.png);
+        }
+        .image-container {
+            width: 50%; 
+            overflow: hidden;                       
+            box-shadow: 10px 10px 20px 0px #333;
+        }
+        .inner-image-container {
+            width: 600%;
+            display: flex;
+            position: relative;
+            transition: 1s ease-in;
+        }
+        .inner-image-container img {         
+            width: calc(100% / 6);
+            height: 40vh;
+            object-fit: cover;
+            object-position: center;
+        }
+        .move0 {
+            left: 0px;
+        }
+        .move1 {
+            left: -100%;
+        }
+        .move2 {
+            left: -200%;
+        }
+        .move3 {
+            left: -300%;
+        }
+        .move4 {
+            left: -400%;
+        }
+        .move5 {
+            left: -500%;
+        }
+        .button-container {
+            width: 50%;
+            padding: 5vmin;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button-container div {
+            width: calc(1rem + 1vmin);
+            height: calc(1rem + 1vmin);
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: .2vmin;            
+        }
+        .button-container div:nth-of-type(1) {
+            background-color: black;
+        }
+        .button-container div:hover {
+            cursor: pointer;
+        }        
+    </style>
+</head>
+<body>
+    <div class="carousel1">
+        <div class="carousel-arrow carousel-arrow-left">            
+        </div>
+        <div class="image-container">
+            <div class="inner-image-container move0">
+                <img src="img/img1.jpg" alt="img1">
+                <img src="img/img2.jpeg" alt="img2">
+                <img src="img/img3.jpg" alt="img3">
+                <img src="img/img4.jpg" alt="img4">
+                <img src="img/img5.jpeg" alt="img5">
+                <img src="img/img6.jpeg" alt="img6">
+            </div>            
+        </div>
+        <div class="carousel-arrow carousel-arrow-right"></div>
+        <div class="button-container">
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+
+    <script>
+        (function initCarousel() {
+            /*Ждем построение DOM:*/
+            document.addEventListener('DOMContentLoaded', carouselStart);
+            
+            function carouselStart() {
+                /*Объявляем необходимые переменные:*/
+                let timer; //Для остановки таймера переключения кнопок пагинации
+                currentImage = 0;//Контроль текущего слайда
+            
+                /*Получаем нужные элементы:*/
+                let carouselButtonLeft = document.querySelector('.carousel-arrow-left');
+                let carouselButtonRight = document.querySelector('.carousel-arrow-right');        
+                let carouselImageContainer = document.querySelector('.inner-image-container');
+                let carouselAllButtons = document.querySelectorAll('.button-container div');            
+
+                /*Вешаем необходимые обработчики:*/
+                carouselAllButtons.forEach(el => el.addEventListener('mousedown', function() {
+                    moveTo(Array.from(carouselAllButtons).indexOf(event.target))})); 
+                carouselButtonLeft.addEventListener('mousedown', moveLeft);        
+                carouselButtonRight.addEventListener('mousedown', moveRight);                   
+
+                /*Описываем необходимые функции:*/                
+                function moveRight() {
+                    if (currentImage == 5) currentImage = 0;
+                    else ++currentImage;                        
+                    clearAll();
+                    showButton();
+                    carouselImageContainer.classList.add(`move${currentImage}`);            
+                }
+                function moveLeft() {
+                    if (currentImage == 0) currentImage = 5;
+                    else --currentImage;
+                    clearAll();
+                    showButton();
+                    carouselImageContainer.classList.add(`move${currentImage}`);            
+                }
+                function moveTo(poz) {
+                    if (poz == currentImage) return;
+                    clearAll();
+                    showButton();
+                    currentImage = poz;
+                    carouselImageContainer.classList.add(`move${currentImage}`);            
+                }
+                function showButton() {
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        carouselAllButtons[currentImage].style.backgroundColor = 'black';
+                    }, 1000);
+                }
+                function clearAll() {
+                    for (let i = 0; i <= 5; i++) {
+                        carouselImageContainer.classList.remove(`move${i}`);
+                        carouselAllButtons[i].style.backgroundColor = 'white';
+                    }
+                }
+            }            
+        })();        
+        </script>
+</body>
+</html>
