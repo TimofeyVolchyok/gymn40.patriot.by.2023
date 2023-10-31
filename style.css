@@ -719,6 +719,11 @@ a:hover{
         height: auto;
     }
  }
+@maeid(max-width:750px){
+    .logo ul li a{
+        text-wrap:nowrap;
+    }
+}
  @media(max-width:650px){
 
 
@@ -731,7 +736,7 @@ a:hover{
     .logo ul{
         justify-content: space-between;    }
     .logo ul li a{
-        font-size: calc(.5rem + .5vmin);
+        font-size: calc(.6rem + .5vmin);
         text-wrap: nowrap;
     }
      .text-message h1{
