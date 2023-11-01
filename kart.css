@@ -67,9 +67,6 @@ a{
 .text-help{
     flex-direction: column;
 }
-.text=helper p{
- text-align:left;
-}
 .img-helper img{
     width: 80%;
     margin: 0 0 2vmin 0;
