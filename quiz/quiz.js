@@ -74,7 +74,7 @@
   
   
   function showScore() {
-    const html = `<p>Ты ответила правильно на ${score} из ${questions.length} <br> что составило ${score / questions.length}</p>`;
+    const html = `<p>Ты ответила правильно на ${score} из ${questions.length} <br> что составило ${score / questions.length *100} %</p>`;
     scoreContainer.innerHTML = html;
   }
   
