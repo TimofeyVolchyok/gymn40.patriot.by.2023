@@ -678,6 +678,9 @@ a:hover{
         color: #ffffff;
         -webkit-text-stroke: .7px black;
     }
+    .benefits-text a {
+        font-size: calc(1.2rem + 1.2vmin);
+    }
     .block-call h1{
         font-size: calc(1.5rem + 1.5vmin);
         color: #ffffff;
@@ -719,12 +722,15 @@ a:hover{
         height: auto;
     }
  }
-@maeid(max-width:750px){
-    .logo ul li a{
-        text-wrap:nowrap;
+ @media(max-width:888px){
+    .benefits-text a {
+        font-size: calc(.75rem + .7vmin);
     }
-}
- @media(max-width:650px){
+    a{
+        font-size: calc(.3rem + .3vmin);
+    }
+ }
+ @media(max-width:655px){
 
 
      header li{
@@ -736,7 +742,7 @@ a:hover{
     .logo ul{
         justify-content: space-between;    }
     .logo ul li a{
-        font-size: calc(.6rem + .5vmin);
+        font-size: calc(.5rem + .5vmin);
         text-wrap: nowrap;
     }
      .text-message h1{
