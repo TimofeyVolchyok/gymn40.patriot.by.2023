@@ -155,8 +155,10 @@ article{
 }
 .item img{
     width: 100%;
+    height: 50vh;
 }
 .item h3{
+    text-wrap: nowrap;
     color: #896E69;
     font-size: calc(1rem + 1vmin);
     margin: 1vmin;
@@ -176,7 +178,7 @@ article{
     border-radius: 10px;
 }
 img:hover{
-    transform: scale(110%);
+    transform: scale(101%);
     transition-duration: .4s;
 }
 footer{
@@ -236,6 +238,10 @@ footer a img{
         font-size: calc(.6rem + .6vmin);
         margin: 1vmin;
     }
+    .item img{
+        width: 100%;
+        height: 35vh;
+    }
 }
 @media(max-width:720px){
     .top h1{
@@ -288,6 +294,10 @@ footer a img{
         color: #540F04;
         font-size: calc(.5rem + .5vmin);
         margin: 1vmin;
+    }
+    .item img{
+        width: 100%;
+        height: 29vh;
     }
 }
 @media(max-width:580px){
@@ -352,6 +362,10 @@ footer a img{
         color: #540F04;
         font-size: calc(.35rem + .35vmin);
         margin: 1vmin;
+    }
+    .item img{
+        width: 100%;
+        height: 23vh;
     }
 }
 @media(max-width:650px){

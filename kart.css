@@ -12,6 +12,7 @@ body,html{
     display:none ;
 }
 h1,h2,h3,h4,p{
+    text-align: center;
     margin: 0;
     color:#896E69;
 }
@@ -67,8 +68,9 @@ a{
 .text-help{
     flex-direction: column;
 }
+
 .img-helper img{
-    width: 80%;
+    width: 85%;
     margin: 0 0 2vmin 0;
 }
 article h2 {
@@ -88,7 +90,7 @@ article h3{
     transition-duration: .3s;
 }
 .img-helper img:hover{
-   transform: scale(130%);
+   transform: scale(110%);
    transition-duration: .3s;
 }
 form{

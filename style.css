@@ -124,6 +124,15 @@ a{
     justify-content: center;
     width: 100%;
 }
+.call-me-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.call-me-text p{
+    margin: 3vmin 0 ;
+}
 #kart1{
     display: none;
 }
@@ -391,6 +400,9 @@ a:hover{
     opacity: 70%;
 
 }
+.benefits-text button a{
+    font-size: calc(.7rem + .7vmin);
+}
 .block-call{
     width: 100%;
     height: 100vh;
@@ -430,9 +442,13 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
+.call-me-input form{
+    align-items: center;
+}
 .call-me-input input, .dropdown{
     width: 90%;
-    margin: 5vmin;
+    margin: 4vmin auto;
+    padding: 2vmin;
     border: none;
     background-color: #d8d9d5;
     text-align: center;
@@ -616,7 +632,7 @@ a:hover{
     }
     .discounts h1{
         color: #707268;
-        font-size: calc(2rem + 2vmin);
+        font-size: calc(1.2rem + 1.2vmin);
         text-align: center;
         margin: 1vmin 0;
     }
@@ -687,7 +703,7 @@ a:hover{
     }
     .call-me-text p{
         color: black;
-        font-size: calc(.5rem + .5vmin);
+        font-size: calc(.8rem + .8vmin);
         margin: 2vmin 1.2vmin;
     }
     .call-me h3{
@@ -696,7 +712,7 @@ a:hover{
         color: black;
     }  
     .our-works h1{
-        font-size: calc(1.5rem + 1.5vmin);
+        font-size: calc(1.2rem + 1.2vmin);
         text-align: center;
         margin-top: 10vmin;
     } 
@@ -724,7 +740,7 @@ a:hover{
  }
  @media(max-width:888px){
     .benefits-text a {
-        font-size: calc(.75rem + .7vmin);
+        font-size: calc(.65rem + .65vmin);
     }
     a{
         font-size: calc(.3rem + .3vmin);
@@ -737,7 +753,9 @@ a:hover{
         display: none;
      }
      #kart1, #alley, #vr{
+        text-wrap: wrap;
         display: block;
+        margin: 3px;
     }
     .logo ul{
         justify-content: space-between;    }
@@ -841,8 +859,16 @@ a:hover{
     .benefit{
         width: 100%;
     }
-    .benefits-text a{
-        font-size: calc(.7rem + 1vmin);
+    .benefits-text button {
+        margin: 0;padding: 0 1vmin;
+        align-items: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .benefits-text button a{
+        padding: 0;
+        margin: 0;
+        font-size: calc(.4rem + .4vmin);
         
     }
     .call-me .helper{
