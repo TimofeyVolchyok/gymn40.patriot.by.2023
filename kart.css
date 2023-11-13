@@ -72,6 +72,7 @@ a{
 .img-helper img{
     width: 85%;
     margin: 0 0 2vmin 0;
+    height: 55vh;
 }
 article h2 {
     font-size: calc(1rem + 1vmin);
@@ -131,15 +132,28 @@ form{
     margin: 0 auto;
   }
   
-  @media (max-width: 600px) {
-    input[type="text"],
-    input[type="file"],
-    button {
-      font-size: 14px;
-      padding: 8px;
-    }
-  }
   
+
+@media(max-width:1105px){
+    p{
+        font-size: calc(.5rem + .5vmin);
+    }
+    .logo ul li a{
+        font-size: calc(.4rem + .4vmin);
+    }
+    .img-helper img{
+        width: 85%;
+        margin: 0 0 2vmin 0;
+        height: 35vh;
+    }
+    
+}
+@media(max-width:960px){
+    .img-helper img{
+        width: 85%;
+        margin: 0 0 2vmin 0;
+        height: 35vh;
+}}
 @media(max-width:650px){
     header{
         position: relative;
@@ -157,13 +171,32 @@ form{
     p{
         font-size: calc(.5rem + .5vmin);
     }
+    .img-helper img{
+        width: 85%;
+        margin: 0 0 2vmin 0;
+        height: 25vh;
+    }
 };
-@media(max-width:1105px){
-    p{
-        font-size: calc(.5rem + .5vmin);
+
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="file"],
+    button {
+      font-size: 14px;
+      padding: 8px;
     }
-    .logo ul li a{
-        font-size: calc(.4rem + .4vmin);
-    }
+    .img-helper img{
+        width: 85%;
+        margin: 0 0 2vmin 0;
+        height: 25vh;}
+  }
+@media(max-width:350px){
     
+        .img-helper img{
+            width: 85%;
+            margin: 0 0 2vmin 0;
+            height: 15vh;
+        }
 }
+
+  

@@ -159,6 +159,7 @@ article{
 }
 .item h3{
     text-wrap: nowrap;
+    text-align: center;
     color: #896E69;
     font-size: calc(1rem + 1vmin);
     margin: 1vmin;

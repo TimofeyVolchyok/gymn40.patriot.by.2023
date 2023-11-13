@@ -244,7 +244,7 @@ a:hover{
 }
 .discounts h1{
     color: #707268;
-    font-size: calc(3rem + 3vmin);
+    font-size: calc(2rem + 2vmin);
     text-align: center;
     margin: 2vmin 0;
 }
@@ -582,7 +582,7 @@ a:hover{
     justify-content: center;
 }     
 .our-works h1{
-    font-size: calc(3rem + 3vmin);
+    font-size: calc(2rem + 2vmin);
     text-align: center;
     margin-top: 10vmin;
 } 
