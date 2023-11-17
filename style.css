@@ -391,6 +391,7 @@ a:hover{
 }
 .benefits-text a{
     font-size: calc(1.3rem + 1.3vmin);
+    margin:.5vmin 0;
     color: #505050;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
