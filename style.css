@@ -822,6 +822,9 @@ a:hover{
         font-size: calc(1rem + 1vmin);
         margin: 2vmin 0;
     }
+    .discount4,.discount5,.discount6,.discount7,.discount8,.discount10,.discount11{
+        display: none!important;
+    }
     .image-container {
         width: 80%; 
         overflow: hidden;                       
