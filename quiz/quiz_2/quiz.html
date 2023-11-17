@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1 class="quiz-title">Quiz</h1>
+    <div id="question-container" class="question-container"></div>
+    <button id="submit-button" class="submit-button">Submit</button>
+    <div id="score-container" class="score-container"></div>
+  </div>
+ 
+  <script>const questions = [
+    {
+    question: "В каком году был освобожден Витебск от немецкой оккупации во время Второй мировой войны?",
+    answers: [
+      { option: "1943", correct: false },
+      { option: "1944", correct: true },
+      { option: "1945", correct: false },
+      { option: "1942", correct: false }
+    ],
+    image: "./images/question1.jpg"
+
+  },
+  {
+    question: "Какую роль сыграл город Орша в событиях Великой Отечественной войны?",
+    answers: [
+      { option: "Оставался нейтральным в течение всей войны", correct: false },
+      { option: "Стал укрытием для гражданских лиц", correct: false },
+      { option: "Стал плацдармом для советских войск и местом жестоких боев", correct: true },
+      { option: "Стал базой для германских войск", correct: false }
+    ],
+    image: "./images/question2.jpg"
+  },
+  {
+    question: "Какие важные сражения происходили в районе Витебска в ходе Великой Отечественной войны?",
+    answers: [
+      { option: "Битва за Москву, Битва на Курской дуге", correct: false },
+      { option: "Война на Тихом океане, Битва за Берлин", correct: false },
+      { option: "Битва за Сталинград, Битва за Курскую", correct: false },
+      { option: "Битва за Витебск, Битва за Оршу", correct: true }    ],
+    image: "./images/question3.jpg"
+  },
+  {
+    question: "Какова важность Витебска и Орши в контексте обороны Советского Союза во время Второй мировой войны?",
+    answers: [
+      { option: "Они не имели стратегического значения в ходе войны", correct: false },
+      { option: "Они служили как транзитные пункты для гуманитарной помощи", correct: false },
+      { option: "Они обеспечивали стратегически важное положение на западном фронте", correct: true },
+      { option: "Их значение было исключительно экономическим", correct: false }
+    ],
+    image: "./images/question4.jpg"
+  },
+  {
+  question: "Кем был освобожден город Орша от немецкой оккупации в 1944 году?",
+    answers: [
+      { option: "Советскими войсками", correct: true },
+      { option: "Польскими войсками", correct: false },
+      { option: "Английскими войсками", correct: false },
+      { option: "Американскими войсками", correct: false }
+    ],
+    image: "./images/question5.jpg"
+  },
+  {
+    question: "Какие решающие сражения происходили в районе Орши в ходе Великой Отечественной войны?",
+    answers: [
+      { option: "Битва за Курскую дугу", correct: false },
+      { option: "Битва за Оршу", correct: true },
+      { option: "Битва за Сталинград", correct: false },
+      { option: "Битва за Москву", correct: false }
+    ],
+    image: "./images/question6.jpg"
+  },
+  {
+    question: "Какую роль сыграл город Витебск в течение Великой Отечественной войны?",
+    answers: [
+      { option: "Оставался нейтральным в течение всей войны", correct: false },
+      { option: "Стал местом переправы гражданских лиц", correct: false },
+      { option: "Стал опорным пунктом для советских войск", correct: true },
+      { option: "Стал базой для германских войск", correct: false }
+    ],
+    image: "./images/question7.jpg"
+  },
+  {
+    question: "Какими факторами обусловлено стратегическое значение региона с Витебском и Оршей в ходе Великой Отечественной войны?",
+    answers: [
+      { option: "Географическим положением и значением для контроля за транспортными маршрутами", correct: true },
+      { option: "Экономической важностью для приграничных торговых связей", correct: false },
+      { option: "Социокультурными особенностями региона", correct: false },
+      { option: "Специфическим религиозным контекстом региона", correct: false }
+    ],
+    image: "./images/question8.jpg"
+  }
+  
+  ];</script>
+  <script src="../quiz.js"></script>
+</body>
+</html>

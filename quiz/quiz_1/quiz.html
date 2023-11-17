@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Викторина ВЕТКА-ГОМЕЛЬ</title>
+  <link rel="stylesheet" href="../quiz.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1 class="quiz-title">Викторина "ВЕТКА-ГОМЕЛЬ"</h1>
+    <div id="question-container" class="question-container"></div>
+    <button id="submit-button" class="submit-button">Ответить</button>
+    <div id="score-container" class="score-container"></div>
+  </div>
+ 
+  <script>const questions = [
+    {
+      question: "Когда нападение фашистской Германии остановило мирное строительство и жизнь города Ветки??",
+      answers: [
+        { option: "18 августа 1941 года", correct: true },
+        { option: "22 сентября 1941 года", correct: false },
+        { option: "13 ноября 1942 года", correct: false },
+        { option: "Нет правильного ответа", correct: false }
+      ],
+      image: "./images/question1.jpg"
+    },
+    {
+      question: "Cколько населённых пунктов было сожжено в районе за время оккупации?",
+      answers: [
+        { option: "39", correct: false },
+        { option: "42", correct: true },
+        { option: "12", correct: false },
+        { option: "26", correct: false }
+      ],
+      image: "./images/question2.jpg"
+    },
+    {
+      question: "Cколько жителей района было вывезено на принудительные работы в Германию?",
+      answers: [
+        { option: "157", correct: false },
+        { option: "464", correct: false },
+        { option: "278", correct: false },
+        { option: "327", correct: true }
+      ],
+      image: "./images/question3.jpg"
+    },
+    {
+      question: "Когда начались первые бои на территории Гомельской области?",
+      answers: [
+        { option: "Август 1941 года", correct: false },
+        { option: "Июль 1941 года", correct: true },
+        { option: "Ноябрь 1941 года", correct: false },
+        { option: "Сентябрь 1942 года", correct: false }
+      ],
+      image: "./images/question4.jpg"
+    },
+    {
+      question: "Когда был освобождён Ветковский район?",
+      answers: [
+        { option: "28 сентября 1943 года", correct: true },
+        { option: "19 июля 1944 года", correct: false },
+        { option: "23 августа 1942 года", correct: false },
+        { option: "31 января 1944 года", correct: false }
+      ],
+      image: "./images/question4.jpg"
+    },
+  ];</script>
+  <script src="../quiz.js"></script>
+</body>
+</html>
